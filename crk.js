@@ -8,7 +8,7 @@ function(_c, _a) // t: #s.target.loc
 
 	// Variable declerations
 	var ez = ["open", "release", "unlock"],
-	c00 = ["red", "orange", "yellow", "lime", "green", "cyan", "blue", "purple"]
+	c00 = ["red", "orange", "yellow", "lime", "green", "cyan", "blue", "purple"],
 	c = true
 
 	_a.m = cl() // Initial call
@@ -60,6 +60,12 @@ function(_c, _a) // t: #s.target.loc
 
 			_a.m = cl()
 		}
+
+		if (crk("l0cket", ["cmppiq", "6hh8xw", "uphlaw", "vc2c7q", "tvfkyq", "xwz7ja", "sa23uw", "ellux0", "72umy0",
+			"i874y3", "9p65cu", "fr8ibu", "eoq6de", "xfnkqe", "pmvr1q", "y111qa"]))
+			{
+				c=true
+			}
 
 	}
 
