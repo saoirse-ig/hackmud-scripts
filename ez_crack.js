@@ -1,0 +1,89 @@
+function(_c, _a) // t: #s.target.loc
+{
+	//_c is context
+	//_a is args
+
+	// Check for missing params
+	if ( !_a || !_a.t ) return {ok: false}
+
+	// Variable declerations
+	var ez = ["open", "release", "unlock"],
+	c00 = ["red", "orange", "yellow", "lime", "green", "cyan", "blue", "purple"]
+	c = true
+
+	_a.m = cl() // Initial call
+
+	// Stops loop if locs are NOT found
+	while (c)
+	{
+		c - false
+
+		// EZ locks
+
+		c = crk("EZ_21", ez)
+
+		if (crk("EZ_35", ez)) c = crk("digit", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+		if (crk("EZ_40", ez)) c = crk("ez_prime", [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97])
+
+
+
+		// c00x locks
+
+		if (crk("c001", c00)) {
+			// Special handling for the color_digit
+			_a.color_digit = _a.c001.length
+
+			// Additional call for the colour digit
+			_a.m = cl()
+		}
+
+		if (crk("c002", c00)) {
+			// Find the position of the correct colour and set the (comp)lement to 4 positions higher
+			let i = c00.indexOf(_a.c002)
+			let c1 = i > 3 ? i - 4 : i + 4
+			_a.c002_complement = c00[c1]
+
+			_a.m = cl()
+		}
+
+		if (crk("c003", c00)) // Special handling for the c003_triad_1 and c003_triad_2 (fuck this)
+		// Find the position of the correct colour and set the triads to the right positions
+		{
+			let i = c00.indexOf(_a.c003),
+				c1 = i > 3 ? i - 3 : i + 5,
+				c2 = i > 4 ? i - 5 : i + 3
+			_a.c003_triad_1 == c00[c1]
+			_a.c003_triad_2 == c00[c2]
+
+			_a.m = cl()
+		}
+
+	}
+
+	return _a
+
+	// Call (cl) function
+	function cl()
+	{
+
+		let r = _a.t.call(_a)
+		return r.split('\n')[r.split('\n').length - 1]
+
+	}
+
+	function crk(l, ans)
+	{
+		if (_a.m.includes(l))
+		{
+
+			for (let a of ans) {
+				_a[l] = a
+
+				 _a.m = cl()
+
+				if (!_a.m.includes("is not")) return true
+			}
+		}
+	}
+}
