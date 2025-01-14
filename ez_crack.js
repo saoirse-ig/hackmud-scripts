@@ -16,7 +16,7 @@ function(_c, _a) // t: #s.target.loc
 	// Stops loop if locs are NOT found
 	while (c)
 	{
-		c - false
+		c = false
 
 		// EZ locks
 
@@ -31,14 +31,16 @@ function(_c, _a) // t: #s.target.loc
 		// c00x locks
 
 		if (crk("c001", c00)) {
+			c=1
 			// Special handling for the color_digit
-			_a.color_digit = _a.c001.length
+			_a.color_digit = _a.c001.length // - used to be = **LOOK AT LATER**
 
 			// Additional call for the colour digit
 			_a.m = cl()
 		}
 
 		if (crk("c002", c00)) {
+			c=1
 			// Find the position of the correct colour and set the (comp)lement to 4 positions higher
 			let i = c00.indexOf(_a.c002)
 			let c1 = i > 3 ? i - 4 : i + 4
@@ -47,14 +49,14 @@ function(_c, _a) // t: #s.target.loc
 			_a.m = cl()
 		}
 
-		if (crk("c003", c00)) // Special handling for the c003_triad_1 and c003_triad_2 (fuck this)
-		// Find the position of the correct colour and set the triads to the right positions
+		if (crk("c003", c00)) 
 		{
+			c=1
 			let i = c00.indexOf(_a.c003),
-				c1 = i > 3 ? i - 3 : i + 5,
-				c2 = i > 4 ? i - 5 : i + 3
-			_a.c003_triad_1 == c00[c1]
-			_a.c003_triad_2 == c00[c2]
+			c2 = i > 3 ? i - 3 : i + 5,
+			c3 = i > 4 ? i - 5 : i + 3
+			_a.c003_triad_1 = c00[c2]
+			_a.c003_triad_2 = c00[c3]
 
 			_a.m = cl()
 		}
@@ -85,5 +87,6 @@ function(_c, _a) // t: #s.target.loc
 				if (!_a.m.includes("is not")) return true
 			}
 		}
+		return false
 	}
 }
